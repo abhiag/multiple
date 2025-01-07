@@ -5,7 +5,7 @@ read -p "Enter your Identifier: " IDENTIFIER
 read -p "Enter your PIN: " PIN
 
 # Bind the account with the provided details
-./multiple-cli bind \
+/root/multipleforlinux/multiple-cli bind \
   --bandwidth-download 150000 \
   --identifier "$IDENTIFIER" \
   --pin "$PIN" \
