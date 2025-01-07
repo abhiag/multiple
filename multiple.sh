@@ -34,5 +34,3 @@ chmod -R 777 multipleforlinux
 # Start the node in the background
 nohup ./multiple-node > output.log 2>&1 &
 
-# Run the binding script directly from GitHub
-bash <(curl -s https://raw.githubusercontent.com/abhiag/multiple/main/bind_multiple.sh)
