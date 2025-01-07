@@ -13,17 +13,15 @@ wget https://cdn.app.multiple.cc/client/linux/x64/multipleforlinux.tar
 tar -xvf multipleforlinux.tar
 
 # Navigate to the extracted directory
-cd multipleforlinux
+cd multipleforlinux || { echo "Directory not found!"; exit 1; }
 
 # Grant executable permissions
 chmod +x ./multiple-cli
 chmod +x ./multiple-node
 
-# Add the directory to PATH
-export PATH=$PATH:/root/multipleforlinux/
-
-# Apply the PATH changes
-source /etc/profile
+# Add the directory to PATH persistently
+echo 'export PATH=$PATH:/root/multipleforlinux/' >> ~/.bashrc
+source ~/.bashrc
 
 # Return to the parent directory
 cd ..
@@ -32,5 +30,4 @@ cd ..
 chmod -R 777 multipleforlinux
 
 # Start the node in the background
-nohup ./multiple-node > output.log 2>&1 &
-
+nohup ./multipleforlinux/multiple-node > output.log 2>&1 &
