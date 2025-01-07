@@ -6,8 +6,8 @@ read -p "Enter your PIN: " PIN
 
 # Bind the account with the provided details
 ./multiple-cli bind \
-  --bandwidth-download 100 \
+  --bandwidth-download 100000 \
   --identifier "$IDENTIFIER" \
   --pin "$PIN" \
-  --storage 200 \
-  --bandwidth-upload 100
+  --storage 200000000 \
+  --bandwidth-upload 100000
