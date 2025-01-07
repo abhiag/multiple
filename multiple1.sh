@@ -28,8 +28,8 @@ chmod +x ./multiple-node
 
 # Add the directory to PATH persistently
 echo "Adding the directory to PATH..."
-echo 'export PATH=$PATH:/root/multipleforlinux/'
-echo 'source /etc/profile'
+export PATH=$PATH:/root/multipleforlinux/
+source /etc/profile
 
 # Return to the parent directory
 echo "Returning to the parent directory..."
