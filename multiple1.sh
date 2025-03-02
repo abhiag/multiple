@@ -15,7 +15,7 @@ tar -xvf multipleforlinux.tar
 # Navigate to the extracted directory
 echo "Navigating to the extracted directory..."
 if [ -d "/root/multipleforlinux" ]; then
-  cd /root/multipleforlinux || { echo "Failed to navigate to /root/multipleforlinux"; exit 1; }
+  cd ~/multipleforlinux || { echo "Failed to navigate to /root/multipleforlinux"; exit 1; }
 else
   echo "Directory /root/multipleforlinux does not exist. Exiting..."
   exit 1
